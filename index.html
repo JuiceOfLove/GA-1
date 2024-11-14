@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Генетический алгоритм для поиска кратчайшего пути</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, select, button {
+      margin: 5px;
+    }
+    #output {
+      white-space: pre-wrap;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+    #matrix {
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Генетический алгоритм для поиска кратчайшего пути в сети</h1>
+
+  <div>
+    <label for="networkSize">Размер сети:</label>
+    <input type="number" id="networkSize" value="5" min="2" max="10">
+  </div>
+
+  <div>
+    <label for="populationSize">Размер популяции:</label>
+    <input type="number" id="populationSize" value="4" min="2" max="20">
+  </div>
+
+  <div>
+    <label for="numGenerations">Количество поколений:</label>
+    <input type="number" id="numGenerations" value="5" min="1" max="100">
+  </div>
+
+  <div>
+    <label for="mutationRate">Вероятность мутации:</label>
+    <input type="number" id="mutationRate" value="0.1" step="0.01" min="0" max="1">
+  </div>
+
+  <div>
+    <label for="crossoverRate">Вероятность кроссовера:</label>
+    <input type="number" id="crossoverRate" value="0.6" step="0.01" min="0" max="1">
+  </div>
+
+  <div>
+    <label for="startNode">Отправитель (вершина):</label>
+    <input type="number" id="startNode" value="0" min="0">
+  </div>
+
+  <div>
+    <label for="endNode">Получатель (вершина):</label>
+    <input type="number" id="endNode" value="4" min="0">
+  </div>
+
+  <div>
+    <label for="mode">Режим работы:</label>
+    <select id="mode">
+      <option value="cyclic">Циклический</option>
+      <option value="step">Пошаговый</option>
+    </select>
+  </div>
+
+  <button id="startButton">Запустить алгоритм</button>
+
+  <div id="matrix"></div>
+
+  <h2>Результаты:</h2>
+  <div id="output"></div>
+
+  <h3>Информация об авторе</h3>
+  <p>Разработчик: Иван Иванов</p>
+  <p>Email: ivan.ivanov@example.com</p>
+  <p>Учебный курс: Основы генетических алгоритмов</p>
+  <p>Год разработки: 2023</p>
+
+  <script src="main.js"></script>
+</body>
+</html>
